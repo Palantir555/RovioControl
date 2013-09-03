@@ -29,9 +29,11 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    /*
     QTranslator translator;
     translator.load("roviocontrol_sp");
     app.installTranslator(&translator);
+    */
 
     StartupWindow = new TMainWindow("Rovio control");
     StartupWindow->show();
