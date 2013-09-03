@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     /*
     QTranslator translator;
-    translator.load("roviocontrol_sp");
+    translator.load(":/translation/spanish.qm");
     app.installTranslator(&translator);
     */
 

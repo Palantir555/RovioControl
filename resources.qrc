@@ -3,4 +3,7 @@
         <file alias="refresh.png">images/refresh.png</file>
         <file alias="defaultImg.jpg">images/DefaultImg.jpg</file>
     </qresource>
+    <qresource prefix="/translation">
+        <file alias="spanish.qm">roviocontrol_sp.qm</file>
+    </qresource>
 </RCC>
