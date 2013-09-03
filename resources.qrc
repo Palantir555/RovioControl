@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="refresh.png">images/refresh.png</file>
+        <file alias="defaultImg.jpg">images/DefaultImg.jpg</file>
+    </qresource>
+</RCC>
