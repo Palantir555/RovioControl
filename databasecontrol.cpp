@@ -24,15 +24,12 @@ DatabaseControl::DatabaseControl(QObject *parent)
     query   = new QSqlQuery;
 
     qDebug() << "Available database drivers:" << QSqlDatabase::drivers();
-    // #!# Estos valores iniciales son para el proceso de desarrollo.
-    //      Esta base de datos sólo es para pruebas y tener la password
-    //      hardcodeada en texto plano no supone un problema.
     this->driver        = "QPSQL";
-    this->host_name     = "ec2-54-243-241-130.compute-1.amazonaws.com";
+    this->host_name     = "Host_Name";
     this->port          = 5432;
-    this->database_name = "d8hfjtvm141pas";
-    this->username      = "wdmbjoovoxfltj";
-    this->password      = "gHVzVF1E1fWSwBx6tWfjCyl6bQ";
+    this->database_name = "DB_Name";
+    this->username      = "DB_User";
+    this->password      = "DB_Password";
 }
 
 DatabaseControl::~DatabaseControl(void)
