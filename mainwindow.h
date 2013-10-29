@@ -189,7 +189,7 @@ private:
     bool prev_ZState;
     bool prev_CandZState;
     QTimer *tmrSerialMovs;
-    bool serialPortMovable; //Stores if "manual override" mode is enabled or not.
+    bool serialPortMovable; //Stores if "manual override" mode is enabled or not
   //</Misc>
 private slots:
     void handleBtExit           (void);

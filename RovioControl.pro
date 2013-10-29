@@ -18,7 +18,6 @@
 TEMPLATES = app
 #Añadimos el icono de la aplicación:
 ICON = images/rovio_top_view_3.icns
-#con += añades y con -= quitas
 
 #indicar la lista de módulos cpp que forman la aplicación
 SOURCES += \
@@ -64,4 +63,3 @@ RESOURCES += \
 TRANSLATIONS = roviocontrol_sp.ts
 
 CODECFORTR = ISO-8859-5
-

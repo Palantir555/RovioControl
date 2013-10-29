@@ -32,7 +32,6 @@ ConfigSPTab::ConfigSPTab(SerialPortControl *mySPC, QWidget *parent) :
     this->fillComboFlow();
 }
 
-//En serio? Este tochaco?? Algo estoy haciendo mal... Pointers mejor?:
 void ConfigSPTab::createLayout (void)
 {
     configGrid      = new QGridLayout;
@@ -396,7 +395,6 @@ bool ConfigSPTab::handleBtConnectPort (void)
     else
     {
         mySerialPortControl_p->closePort();
-
         btConnectPort->setText ("Connect");
     }
     mySerialPortControl_p->cleanBuffer();

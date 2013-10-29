@@ -27,8 +27,10 @@ Copyright 2013 Juan Carlos Jiménez Caballero
 TMainWindow *StartupWindow;
 int main(int argc, char *argv[])
 {
+
     QApplication app(argc, argv);
 
+    //Translate interface to Spanish:
     /*
     QTranslator translator;
     translator.load(":/translation/spanish.qm");

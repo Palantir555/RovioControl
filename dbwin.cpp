@@ -154,6 +154,9 @@ void DBWindow::createWidgets (void)
     btAddTableToPath->setAutoDefault (false);
     btImportTuning  ->setAutoDefault (false);
 
+    btAddTableToPath->setEnabled (false);
+    btImportTuning  ->setEnabled (false);
+
     connect (comboTables        ,SIGNAL(activated(QString)) ,this
              ,SLOT(comboTables_handleIndexChanged(QString)));
     connect (btCreateTable      ,SIGNAL(released())         ,this
@@ -335,6 +338,7 @@ void DBWindow::fill_table (QSqlQuery *query)
             currentTableFields->contains(*strCommand, Qt::CaseInsensitive))
     {
         btAddTableToPath->setEnabled(true);
+        btImportTuning->setEnabled(false);
         this->showInsertCommand();
         this->hideTuningValues();
     }
@@ -343,6 +347,7 @@ void DBWindow::fill_table (QSqlQuery *query)
              currentTableFields->contains(*strMovsNum, Qt::CaseInsensitive))
     {
          btImportTuning->setEnabled(true);
+         btAddTableToPath->setEnabled(false);
          this->showTuningValues();
          this->hideInsertCommand();
     }

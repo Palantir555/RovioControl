@@ -377,7 +377,7 @@ void RobotControl::set_followPath (bool opt)
 void RobotControl::request_movement (QString command)
 {
     QString url_to_send = QString(robot_url.toString() + command);
-    qDebug() << "Sending the following URL:" << url_to_send; // For debugging purposes
+    //qDebug() << "Sending the following URL:" << url_to_send; // For debugging purposes
     this->movement_url.setUrl(url_to_send);
     QNetworkRequest move_request;
     move_request.setUrl (movement_url);

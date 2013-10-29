@@ -150,27 +150,6 @@ void SerialPortControl::onDataAvailable (void)
     this->processBuffer ();
 }
 
-/*
-void SerialPortControl::processBuffer (void)    //String format: "$H0001V0001#"   [0001 == %04d]
-{
-    unsigned int i=0;
-    //char string_to_check[STR_LENGTH];
-    for (i=0; i<strlen(buffer); i++)
-    {
-        if ((buffer[i] == '$') && (strlen(buffer+i) >= STR_LENGTH) && (buffer[i+STR_LENGTH-1] == '#'))
-        {
-            lastH_value = H_value;
-            lastV_value = V_value;
-            //strncpy(string_to_check, STR_LENGTH, sizeof(char));
-            //if (checksum_check (string_to_check))
-            sscanf ((buffer+i), "$H%04dV%04d#", &H_value, &V_value);
-            emit stringProcessed();
-            strncpy (buffer, (buffer+i), strlen(buffer+i)+1);
-            i=0;
-        }
-    }
-}
-*/
 void SerialPortControl::processBuffer (void)
 {
     unsigned int i=0;
@@ -184,7 +163,7 @@ void SerialPortControl::processBuffer (void)
             lastR_value = R_value;
             //strncpy(string_to_check, STR_LENGTH, sizeof(char));
             //if (checksum_check (string_to_check))
-            sscanf ((buffer+i), "$H%04dV%04dR%04dC%1dZ%1dB%1d#",
+            sscanf ((buffer+i), "$H%04dV%04dR%04dU%1dD%1dL%1d#",
                     &H_value, &V_value, &R_value, &C_value, &Z_value, &CandZ_value);
             emit stringProcessed();
             strncpy (buffer, (buffer+i), strlen(buffer+i)+1);
