@@ -17,32 +17,32 @@
 #indicar que tipo de destino se quiere compilar. En este caso una aplicacción
 TEMPLATES = app
 #Añadimos el icono de la aplicación:
-ICON = images/rovio_top_view_3.icns
+ICON = resources/images/rovio_top_view_3.icns
 
 #indicar la lista de módulos cpp que forman la aplicación
 SOURCES += \
-    mainwindow.cpp \
-    dbwin.cpp \
-    configsptab.cpp \
-    serialportcontrol.cpp \
-    configdbtab.cpp \
-    databasecontrol.cpp \
-    robotcontrol.cpp \
-    configrctab.cpp \
-    newtablewidget.cpp
-SOURCES += main.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/dbwin.cpp \
+    src/configsptab.cpp \
+    src/serialportcontrol.cpp \
+    src/configdbtab.cpp \
+    src/databasecontrol.cpp \
+    src/robotcontrol.cpp \
+    src/configrctab.cpp \
+    src/newtablewidget.cpp
 
 #indicar la lista de cabeceras propias que se van a usar
 HEADERS += \
-    mainwindow.h \
-    dbwin.h \
-    configsptab.h \
-    serialportcontrol.h \
-    configdbtab.h \
-    databasecontrol.h \
-    robotcontrol.h \
-    configrctab.h \
-    newtablewidget.h
+    lib/mainwindow.h \
+    lib/dbwin.h \
+    lib/configsptab.h \
+    lib/serialportcontrol.h \
+    lib/configdbtab.h \
+    lib/databasecontrol.h \
+    lib/robotcontrol.h \
+    lib/configrctab.h \
+    lib/newtablewidget.h
 
 include(qextserialport/src/qextserialport.pri)
 
@@ -55,11 +55,11 @@ FORMS +=
 QT += sql network
 
 RESOURCES += \
-    resources.qrc
+    resources/resources.qrc
 
 
 #Translation:
 
-TRANSLATIONS = roviocontrol_sp.ts
+TRANSLATIONS = languages/roviocontrol_sp.ts
 
 CODECFORTR = ISO-8859-5
